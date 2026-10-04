@@ -1,0 +1,21 @@
+{
+  "name": "dashscope-api-proxy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "OpenAI-compatible API proxy with Supabase-managed proxy keys and admin panel.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.57.4",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.1.0",
+    "helmet": "^8.1.0",
+    "node-cron": "^4.6.0"
+  }
+}

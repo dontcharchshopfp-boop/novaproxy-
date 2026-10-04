@@ -1,0 +1,29 @@
+# Example client configuration
+# The client talks ONLY to NovaProxy. Never put the upstream provider key here.
+
+default_model = "novaproxy/kimi-k3"
+
+[providers.novaproxy]
+type = "openai"
+base_url = "https://novaproxy.onrender.com/v1"
+api_key = "px_live_YOUR_PROXY_KEY"
+
+[models."novaproxy/kimi-k3"]
+provider = "novaproxy"
+model = "kimi-k3"
+max_context_size = 200000
+
+[models."novaproxy/qwen3.8-max"]
+provider = "novaproxy"
+model = "qwen3.8-max"
+max_context_size = 200000
+
+[models."novaproxy/glm-5.2"]
+provider = "novaproxy"
+model = "glm-5.2"
+max_context_size = 200000
+
+[models."novaproxy/deepseek-v4-pro"]
+provider = "novaproxy"
+model = "deepseek-v4-pro"
+max_context_size = 200000

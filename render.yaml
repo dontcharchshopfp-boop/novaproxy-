@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: novaproxy
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_KEY
+        sync: false
+      - key: UPSTREAM_BASE_URL
+        sync: false
+      - key: UPSTREAM_API_KEY
+        sync: false
+      - key: STRAX_API
+        sync: false
+      - key: STRAX_BASE_URL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: ADMIN_SESSION_SECRET
+        sync: false
